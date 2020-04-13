@@ -66,8 +66,8 @@ public class UpdateDeletePets {
     public void delete() {
 
         Response response = RestAssured.given()
-                .baseUri("http://192.168.99.100:8080/")
-                .basePath("api/v3/pet/")
+                .baseUri("petstore.swagger.io/v2/")
+                .basePath("pet/")
                 .pathParam("petId", "856")
                 .queryParam("api_key", "api_key")
                 .when().delete("{petId}")
