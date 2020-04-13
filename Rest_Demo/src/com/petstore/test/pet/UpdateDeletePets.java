@@ -52,11 +52,11 @@ public class UpdateDeletePets {
     @Test
     void checkPetByNonExistingId() {
         Response response = RestAssured.given()
-                .baseUri("http://192.168.99.100:8080")
-                .basePath("/api/v3/pet")
+                .baseUri("https://petstore.swagger.io/v2")
+                .basePath("/pet/")
                 .pathParam("petId", 856)
                 .contentType(ContentType.JSON)
-                .when().get("/{petId}")
+                .when().get("{petId}")
                 .then()
                 .extract().response();
         System.out.println(response.asString());
