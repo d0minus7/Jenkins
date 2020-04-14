@@ -10,8 +10,8 @@
 <!--                    <include name="checkPetById"/>-->
 <!--                    <include name="updatePetData"/>-->
 <!--                    <include name="updatePetDataWithNonExistingId"/>-->
-                    <include name="checkPetByNonExistingId"/>
-<!--                    <include name="delete"/>-->
+<!--                    <include name="checkPetByNonExistingId"/>-->
+                    <include name="delete"/>
                 </methods>
             </class>
         </classes>
