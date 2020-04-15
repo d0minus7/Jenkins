@@ -66,7 +66,7 @@ public class UpdateDeletePets {
     public void delete() {
 
         Response response = RestAssured.given()
-                .baseUri("http://52.87.243.43:9000/")
+                .baseUri("http://3.89.92.46:9000/")
                 .basePath("api/v3/pet/")
                 .pathParam("petId", "856")
                 .queryParam("api_key", "api_key")
