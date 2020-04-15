@@ -13,7 +13,7 @@ public class UpdateDeletePets {
     @Test
     void checkPetById() {
         Response response = RestAssured.given()
-                .baseUri("http://192.168.99.100:8080")
+                .baseUri("http://3.89.92.46:9000/")
                 .basePath("/api/v3/pet")
                 .pathParam("petId", 10)
                 .contentType(ContentType.JSON)
@@ -26,8 +26,8 @@ public class UpdateDeletePets {
     @Test
     public void updatePetData() {
         Response response = RestAssured.given()
-                .baseUri("http://192.168.99.100:8080")
-                .basePath("/api/v3/pet")
+                .baseUri("http://3.89.92.46:9000/")
+                .basePath("api/v3/pet")
                 .contentType(ContentType.JSON)
                 .body(new File("updatePet.json"))
                 .when().put()
@@ -39,8 +39,8 @@ public class UpdateDeletePets {
     @Test
     public void updatePetDataWithNonExistingId() {
         Response response = RestAssured.given()
-                .baseUri("http://192.168.99.100:8080")
-                .basePath("/api/v3/pet")
+                .baseUri("http://3.89.92.46:9000/")
+                .basePath("api/v3/pet")
                 .contentType(ContentType.JSON)
                 .body(new File("updatePet2.json"))
                 .when().put()
@@ -52,8 +52,8 @@ public class UpdateDeletePets {
     @Test
     void checkPetByNonExistingId() {
         Response response = RestAssured.given()
-                .baseUri("https://petstore.swagger.io/v2")
-                .basePath("/pet/")
+                .baseUri("http://3.89.92.46:9000/")
+                .basePath("api/v3/pet/")
                 .pathParam("petId", 856)
                 .contentType(ContentType.JSON)
                 .when().get("{petId}")
